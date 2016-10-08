@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="icon" type="image/png" href="images/css3.png">
+		<title>Grille des propriétes CSS</title>
+	</head>
+		
+	<body>
+
+	<nav>
+			
+			<p><a href="index.html">Le HTML 5</a></p>
+				
+			<p><a href="#taille">La taille</a></p>
+
+			<p><a href="#selecteurs">Les selecteurs</a></p>
+			
+			<p>Les propriétés</p>
+
+			<ul>
+				<li><a href="#couleurs">Propriétés de couleur</a></li>
+				<li><a href="#back">Propriétés de background</a></li>
+				<li><a href="#text">Propriétés de texte</a></li>
+				<li><a href="#bordures">Propriétés de bordures</a></li>
+				<li><a href="#tableau">Propriétés des tableaux</a></li>
+				<li><a href="#block">Propriétés block et inline</a></li>
+				<li><a href="#dyn">Apparances dynamiques</a></li>
+			</ul>
+
+			<p>Mise en page</p>
+
+			<ul>
+				<li><a href="#flex">Flex-box</a></li>
+				<li><a href="#autre">Autre</a></li>
+			</ul>
+			
+		</nav>
+
+	<div id="bloc2">
+
+	<header>
+	
+		<h1><span class="grostitre">Les différents codes CSS</span></h1>
+		
+		<p class="p1">Le CSS est un langage qui possède des propriétés et des valeurs. Pour faciliter on écrira les propriétés en <span class="bleu">bleu</span> et les valeurs en <span class="violet">violet</span>, en pratique dans "sublime text" le texte se colore en bleu uniquement.Les autres couleurs sont expliquées sur la page HTML.</p>
+
+	<!--Photo d'illustration du CSS-->
+
+	
+			<figure class="photobase">
+				<img src="images/base_css.png" alt="Une image de la base du CSS">
+				<figcaption>Voici un code CSS</figcaption>
+			</figure>	
+
+		</header>
+
+		<hr />
+
+		<section>
+		
+		<h2 id="taille">La taille</h2>
+			
+			<ul>
+				<li>Taille absolue (non conseillée):</li>
+			</ul>	
+				<p>Indique une taille en pixels, en centimètres ou millimètres. Cette méthode est très précise mais il est conseillé de ne l'utiliser que si c'est absolument nécessaire, car on risque d'indiquer une taille trop petite pour certains lecteurs.</p>
+				<p>Exemple: <span class="rouge">p</span><span class="bleu">{font-size: 14px}</span>, px pouvant être remplacé par cm où mm.</p>
+
+			<ul>
+				<li>Taille relative (recommandée):</li>
+			</ul>	
+				<p>Indique une taille relative : en pourcentage, « em » ou « ex », cette technique a l'avantage d'être plus souple. Elle s'adapte plus facilement aux préférences de taille des visiteurs.</p>
+				<p>Exemple: <span class="rouge">p</span><span class="bleu">{font-size: 1em}</span>, em pouvant être remplacé par ex de base plus petit, %, ou bien <span class="bleu">xx-small, x-small, small</span> etc...</p>
+				<p>1 em = taille normale, pour grossir le texte on écrira 1.3em, pour le diminuer 0.8em par exemple.</p>
+				<p>Attention : pour les nombres décimaux, il faut mettre un point et non une virgule.</p>
+		
+		</section>
+
+		<hr />
+
+		<section>
+
+			<h2 id="selecteurs">Grille des sélecteurs CSS</h2>
+
+			<p>Ici il faudra retenir le positionnement des balises, et les remplacer à sa guise selon ses besoin par rapport au code. Dans le vrai code il faudra remplir les accolades {} par les <span class="bleu">propriétés</span> et <span class="violet">valeurs</span> désirées.</p>
+
+			<table>
+
+				<tr>
+					<th>Nom</th>
+					<th>Description</th>
+				</tr>
+
+				<tr>
+					<td><span class="rouge">p</span>{<span class="bleu">color</span>: <span class="violet">blue;</span>}</td>
+					<td>Tout les paragraphes seront de couleur bleu.</td>
+				</tr>
+
+				<tr>
+					<td><span class="rouge">p, h1</span>{<span class="bleu">color</span>: <span class="violet">blue;</span>}</td>
+					<td>Ici tous les <span class="rouge">p</span> et tous les <span class="rouge">h1</span> seront de couleur bleu, on à pris deux balises d'un coup.</td>
+				</tr>
+
+				<tr>
+					<td><span class="vert">.class</span>{<span class="bleu">color</span>: <span class="violet">blue;</span>}</td>
+					<td>Dans ce cas ci on selectionne les attributs <span class="vert">class</span> et on les colores en bleu. Class doit être evidemment remplacé par la valeur donnée dans le code.</td>
+				</tr>
+
+				<tr>
+					<td><span class="vert">#id</span>{<span class="bleu">color</span>: <span class="violet">blue;</span>}</td>
+					<td>Même schéma qu'au dessus mais cette fois ci avec un <span class="vert">id</span>, qui doit etre lui aussi remplacé par la valeur <strong>unique</strong> en question.</td>
+				</tr>
+
+				<tr>
+					<td><span class="rouge">*</span>{<span class="bleu">color</span>: <span class="violet">blue;</span>}</td>
+					<td>Voici le selecteur universel, qui selectionne <strong>toutes</strong> les balises du code.</td>
+				</tr>
+
+				<tr>
+					<td><span class="rouge">h1 em</span>{<span class="bleu">color</span>: <span class="violet">blue;</span>}</td>
+					<td>Ce positionnement selectionne les balises B contenues dans une balise A, dans cet exemple tous les <span class="rouge">em</span> contenus dans <span class="rouge">h1</span> seront bleu.</td>
+				</tr>
+
+				<tr>
+					<td><span class="rouge">h3 + p</span>{<span class="bleu">color</span>:<span class="violet">blue;</span>}</td>
+					<td>Sélectionne la première balise <span class="rouge">p</span> située après un titre <span class="rouge">h3</span>.</td>
+				</tr>
+
+				<tr>
+					<td><span class="rouge">a</span>[<span class="vert">title</span>]{<span class="bleu">color</span>:<span class="violet">blue;</span>}</td>
+					<td>Selectionne tous les liens <span class="rouge">a</span> qui possèdent un attribut <span class="vert">title</span>.</td>
+				</tr>
+
+				<tr>
+					<td><span class="rouge">a</span>[<span class="vert">title</span>=<span class="jaune">"Cliquez ici"</span>]{<span class="bleu">color</span>:<span class="violet">blue;</span>}</td>
+					<td>Idem, mais l'attribut doit en plus avoir exactement pour valeur « Cliquez ici ».</td>
+				</tr>
+
+				<tr>
+					<td><span class="rouge">a</span>[<span class="vert">title*</span>=<span class="jaune">"ici"</span>]{<span class="bleu">color</span>:<span class="violet">blue;</span>}</td>
+					<td>Idem, l'attribut doit cette fois contenir dans sa valeur le mot « ici » (peu importe sa position).</td>
+				</tr>
+
+			</table>
+
+			<p>Il en existe bien d'autres.</p>
+
+		</section>
+
+		<hr />
+
+		<section>
+			
+		<h2>Grille des propriétés CSS</h2>
+	
+		<h3 id="couleurs">Propriétés de couleur</h3>
+			<table>
+
+				<tr>
+					<th>Nom</th>
+					<th>Description</th>
+				</tr>
+
+				<tr>
+					<td>/*commentaire*/</td>
+					<td>Ceci est un commentaire à la manière du HTML, il ne sera pas affiché dans le navigateur.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">Color</span>: <span class="violet">blue</span>;}</td>
+					<td>Détermine la couleur.</td>
+				</tr>
+
+			</table>
+
+		<h3 id="back">Propriétés de background</h3>
+				
+			<table>	
+
+				<tr>
+					<th>Nom</th>
+					<th>Description</th>		
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">background-color</span> : <span class="violet">bleu</span>;}</td>
+					<td>Indique une couleur de fond.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">background-image</span> :<span class="violet">url("image.jpg")</span>;}</td>
+					<td>Voici comment introduire une image en fond.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">background-attachment</span>: <span class="violet">scroll</span>;}</td>
+					<td>Cette propriété de fixer ou bien scroller l'image de fond: <span class="violet">fixed, scroll</span> (par défaut).</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">background-repeat</span>:<span class="violet">no-repeat</span>;}</td>
+					<td>Par défaut, l'image de fond est répétée en mosaïque : <span class="violet">repeat</span>. Vous pouvez changer cela : <span class="violet">no-repeat, repeat-x, repeat-y</span>.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">background-position</span>: <span class="violet">center</span>;}</td>
+					<td>On peut indiquer où doit se trouver l'image de fond si le background est en <span class="violet">no-repeat</span> pour que cela soit intéréssant.<br/>
+					Exemple: {<span class="bleu">background-position</span>: <span class="violet">30px 50px</span>;} le fond sera placé à 30 pixels de la gauche et à 50 pixels du haut.<br />
+					On peux aussi écrire : <span class="violet">top, bottom, left, right, center</span>. Il est possible de combiner ces mots.</td>
+				</tr>
+
+				<tr>
+					<td class="bleu">background</td>
+					<td><p>Si vous utilisez beaucoup de propriétés en rapport avec le fond, vous pouvez utiliser une sorte de « super-propriété » appelée background dont la valeur peut combiner plusieurs des propriétés vues précédemment : <span class="violet">background-image, background-repeat, background-attachment et background-position</span>.</p>
+					<p>Exemple : <span class="bleu">background</span>: <span class="violet">url("soleil.png") fixed no-repeat top right;</span>}<br />
+					L'ordre des valeurs n'a pas d'importance. Vous n'êtes pas obligés de mettre toutes les valeurs.</p>
+					<p>Il est possible de donner plusieurs images de fond à un élément. Pour cela, il suffit de séparer les déclarations par une virgule, comme ceci:<br /> <span class="bleu">background</span>: <span class="violet">url("soleil.png") fixed no-repeat top right, url("neige.png") fixed;</span>}<br />
+					La première image de cette liste sera placée par-dessus les autres.</p></td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">opacity</span>: <span class="violet">1;</span>}</td>
+					<td> Permet d'indiquer le niveau d'opacité, totalement transparent jusqu'à opaque : <span class="violet">0, 0.1, 0.2...1</span>.</td>	
+				</tr>
+
+			</table>
+
+		<h3 id="text">Propriétés de police et de texte</h3>
+	
+			<table>
+			
+				<tr>
+					<th>Nom</th>
+					<th>Description</th>		
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">font-size</span> : <span class="violet">1em</span>;}</td>
+					<td>Détermine la taille de la police.</td>
+				</tr>	
+
+				<tr>
+					<td>{<span class="bleu">font-family</span> : <span class="violet">arial, "comic san ms", serif, sans-serif</span>;}</td>
+					<td>Détermine la police utilisé par le navigateur dans l'ordre de priorité.</td>
+				</tr>	
+
+				<tr>
+					<td class="bleu">@fontface{ 
+										  <span class="violet"> font-family: "police téléchargeable</span><br />
+					<div id="police"> src: url('fichierdelapolice.ttf');<br />
+					                       url('fichierdelapolice.eot');<br />
+										   url('fichierdelapolice.woof');<br />
+										   url('fichierdelapolice.svg'); <span class="bleu">}</span></div>
+										   </td>
+								 
+					<td>Code CSS d'une police à faire télécharger au visiteur.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">font-style</span> : <span class="violet">normal</span>;}</td>
+					<td>Définit le style du texte : <span class="violet">italic, oblique, normal</span>.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">font-weight</span> : <span class="violet">normal</span>;}</td>
+					<td>Détermine le style du texte, normal ou gras : <span class="violet">normal (par défaut), bold</span>.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">text-decoration</span> : <span class="violet">none</span>;}</td>
+					<td>Détermine la déco du texte, normal, souligné, barré, ligne au-dessus ou clignontant: <span class="violet">none (par défaut), underline, line-through, overline, blink</span>.<br />
+					    A noter cette dernière valeur ne fonctionne pas sur tout les navigateurs.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">Text-align</span> : <span class="violet">center</span>;}</td>
+					<td>Permet d'aligner le texte sur la page, à gauche, à droite, au centre, ou justifié (le texte prendra toute la largeur sans laisser d'espace blanc à la fin des lignes):<br /> <span class="violet">left, right, center, justify
+					</span>.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">float</span>: <span class="violet">left</span>;}</td>
+					<td>Le CSS nous permet de faire flotter un élément autour du texte. On dit aussi qu'on fait un « habillage »à droite ou à gauche : <span class="violet">left, right</span>.<br />
+						<strong>Vous devez placer l'élément flottant en premier dans le code HTML. Si vous placez l'image après le paragraphe, l'effet ne fonctionnera pas.</strong></td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">clear</span>; <span class="violet">both</span>;}</td>
+					<td>C'est cette propriété CSS qui permet de dire : « Stop, ce texte doit être en-dessous du flottant et non plus à côté »: <span class="violet"> left, right , both</span>.<br />
+						Pour simplifier, on va utiliser tout le temps le <span class="violet">{clear: both;}</span></td>
+				</tr>
+
+			</table>
+			
+		<h3 id="bordures">Propriétés de bordures et d'ombre</h3>	
+
+			<table>
+
+				<tr>
+					<th>Nom</th>
+					<th>Description</th>		
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">Border</span>: <span class="violet">3px blue dashed</span>;}</td>
+					<td>La super propriété <span class="bleu">border</span> regroupe les 3 propriétes suivantes : <span class="bleu">border-width, border-color, border-style</span>.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">border-width</span>: <span class="violet">3px;</span>}</td>
+					<td> Détermine la largeur d'une bordure.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">border-color</span>: <span class="violet">blue</span>;}</td>
+					<td>Détermine la couleur d'une bordure.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">border-style</span>: <span class="violet">solid</span>;}</td>
+					<td>Détermine la forme d'une bordure qui pux être: <span class="violet">solid, dotted, dashed, double, groove, ridge, inset, outset</span>.<br />
+						On peux également appliquer une bordure différente à chaque coté: <span class="violet">border-top, border-left, border-right, border-bottom</span>.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">border-radius</span>: <span class="violet">10px</span>;}</td>
+					<td>Cette propriété permet d'arrondir les angles de la bordure.<br />
+						On peut aussi préciser la forme de l'arrondi pour chaque coin: <span class="bleu">border-radius</span>:<span class="violet">10px 5px 10px 5px;</span>}. Cela commence en haut à gauche en suivant le sens horaire.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">box-shadow</span>: <span class="violet">6px 6px 0px black</span>;}</td>
+					<td>La propriété s'applique à tout le bloc et prend quatre valeurs dans l'ordre suivant : le décalage horizontal de l'ombre, le décalage vertical de l'ombre, l'adoucissement du dégradé, la couleur de l'ombre. <br />
+						On peut aussi rajouter une cinquième valeur facultative : <span class="violet">inset</span>.Dans ce cas, l'ombre sera placée à l'intérieur du bloc, pour donner un effet enfoncé.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">text-shadow</span>: <span class="violet">2px 2px 4px black</span>;}</td>
+					<td>Avec cette propriété vous pouvez ajouter une ombre directement sur les lettres de votre texte ! Les valeurs fonctionnent exactement de la même façon que <span class="bleu">box-shadow</span>.</td>
+				</tr>
+
+			</table>
+
+
+		<h3 id="tableau">Les tableaux</h3>
+
+			<table>
+				
+				<tr>
+					<th>Nom</th>
+					<th>Description</th>		
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">border-collapse</span>: <span class="violet">collapse</span>;}</td>
+					<td>Cette propriété par défaut prend la valeur <span class="violet">separate</span>, qui sépare les cellules d'un tableau, mais peux être changée en <span class="violet">collapse</span> qui fusionnera les cellules.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">caption-side</span>: <span class="violet">top</span>;}</td>
+					<td>Sachez que vous pouvez changer la position du titre d'un tableau avec cette propriété qui peux prendre les valeurs <span class="violet">top</span> ou <span class="violet">bottom</span>.</td>
+				</tr>
+
+			</table>
+
+		<h3 id="block">Propriétés des block et inline</h3>
+
+			<p>En HTML, la plupart des balises peuvent se ranger dans l'une ou l'autre de deux catégories :</p>
+
+			<ul>
+				<li>Les balises inline: par exemple les liens</li>
+				<li>Les balises block: par exemple les paragraphes</li>
+			</ul>
+
+			<p>Ces balises peuvent avoir les propriétés de ce tableau.</p>
+
+			<table>
+				<tr>
+					<th>Nom</th>
+					<th>Description</th>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">width</span>: <span class="violet">1px</span>}</td>
+					<td>C'est la largeur du bloc, à exprimer en pixel ou en pourcentage.On peut demander à ce qu'un bloc ait des dimensions minimales et maximales:<span class="violet">min-width, max-width</span>.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">height</span>:<span class="violet">40%</span>}</td>
+					<td>C'est la hauteur du bloc, à exprimer en pixel ou en pourcentage.On peut demander à ce qu'un bloc ait des dimensions minimales et maximales: <span class="violet">min-height, max-height</span>.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">padding</span>: <span class="violet">12px</span>}</td>
+					<td> indique la taille de la marge intérieure. À exprimer en général en pixels (px). Il n'y a par défaut pas de marge intérieure. Si vous voulez spécifier des marges différentes en haut, en bas, à gauche et à droite, il va falloir utiliser des propriétés plus précises… Le principe est le même que pour la propriété <span class="bleu">border</span>: <span class="violet">padding-left, padding-right, padding-top, padding bottom</span>.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">margin</span>: <span class="violet">12px</span>}</td>
+					<td>indique la taille de la marge extérieure. Là encore, on utilise le plus souvent des pixels. En revanche, il y a une marge extérieure par défaut. Pareil que pour <span class="bleu">padding</span>, on peux être plus précis dans la demande du style: <span class="bleu">margin-left, margin-right, margin-top, margin-bottom</span>. Il est possible de centrer en utilisant la valeur <span class="violet">auto</span>.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">overflow</span>:<span class="violet">hidden</span>;}</td>
+					<td>Lorsqu'on commence à définir des dimensions précises pour nos blocs, comme on vient de le faire, il arrive qu'ils deviennent trop petits pour le texte qu'ils contiennent. Les propriétés CSS que nous allons voir ici ont justement été créées pour contrôler les dépassements, visible (par défaut), caché, défilement: <span class="violet">visible, hidden, scroll, auto</span>.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">word-wrap</span>:<span class="violet">break-word</span>;}</td>
+					<td>Cette propriété permet de forcer la césure des très longs mots (généralement des adresses un peu longues). </td>
+				</tr>
+
+			</table>
+
+		<h3 id="dyn">Apparences dynamiques</h3>
+
+			<p>C'est une de ses forces : le CSS nous permet aussi de modifier l'apparence des éléments de façon dynamique, c'est-à-dire que des éléments peuvent changer de forme une fois que la page a été chargée.</p>
+			<p>Comme tous les autres pseudo-formats que nous allons voir, c'est une information que l'on rajoute après le nom de la balise (ou de la classe) dans le CSS.</p>
+
+			<table>
+				
+				<tr>
+					<th>Nom</th>
+					<th>Description</th>
+				</tr>
+
+				<tr>
+					<td><span class="rouge">a</span>:<span class="violet">hover</span> {<span class="bleu">text-decoration</span>: <span class="violet">underline</span>; <span class="bleu">color</span>: <span class="violet">green</span>;}</td>
+					<td> <span class="violet">Hover</span> veux dire survoler, dans l'exemple le lien que l'on survolera avec la souris sera de couleur verte.</td>
+				</tr>
+
+				<tr>
+					<td><span class="rouge">a</span>:<span class="violet">active</span>{ <span class="bleu">background-color</span>: <span class="violet">blue</span>;}</td>
+					<td>Le format <span class="violet">active</span> permet d'appliquer un style <strong>au moment du clic</strong>, le changement intervient lorsque le bouton de la souris est enfoncé. En clair, ce n'est pas forcément toujours bien visible.</td>
+				</tr>
+
+				<tr>
+					<td><span class="rouge">a</span>:<span class="violet">focus</span>{ <span class="bleu">background-color</span>: <span class="violet">blue</span>;}</td>
+					<td>Applique un style lorsque l'élément est sélectionné. Une fois que vous avez cliqué, le lien reste « sélectionné » (il y a une petite bordure en pointillés autour). C'est cela, la sélection.<br /> Ce pseudo-format pourra être appliqué à d'autres balises HTML comme dans les formulaires</td>
+				</tr>
+
+				<tr>
+					<td><span class="rouge">a</span>:<span class="violet">visited</span>{ <span class="bleu">color</span>: <span class="violet">blue</span>;}</td>
+					<td>Applique un style à un lien <strong>déjà visité</strong>.</td>
+				</tr>
+
+				<tr>
+					<td><span class="violet">:required</span>{<span class="bleu">color</span>: <span class="violet">green</span>;}</td>
+					<td>Colore un champ recquis obligatoire en vert dans ce cas là.</td>
+				</tr>
+
+				<tr>
+					<td><span class="violet">:invalid</span>{<span class="bleu">color</span>: <span class="violet">red</span>;}</td>
+					<td>Colore un champ invalide en rouge dans ce cas là.</td>
+				</tr>
+
+			</table>
+		
+		<h2>Mise en page</h2>
+
+		<h3 id="flex">Mise en page avec flex-box</h3>
+
+		<p>Le principe de la mise en page avec Flexbox est simple : vous définissez un conteneur, et à l'intérieur vous placez plusieurs éléments. Imaginez un carton dans lequel vous rangez plusieurs objets : c'est le principe !</p>
+
+			<table>
+				
+				<tr>
+					<th>Nom</th>
+					<th>Description</th>	
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">display</span>: <span class="violet">flex</span>;}</td>
+					<td>Avec cette valeur les blocs se placent par défaut côte à côte.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">flex-direction</span>: <span class="violet">column</span>;}</td>
+					<td>Flexbox nous permet d'agencer ces éléments dans le sens que l'on veut. Avec <span class="bleu">flex-direction</span> , on peut les positionner verticalement ou encore les inverser.<br /> Il peut prendre les valeurs suivantes : <span class="violet">row, column, row-reverse, column-reverse</span>.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">flex-wrap</span>: <span class="violet">wrap</span>;}</td>
+					<td>Par défaut, les blocs essaient de rester sur la même ligne s'ils n'ont pas la place (ce qui peut provoquer des bugs de design parfois). Si vous voulez, vous pouvez demander à ce que les blocs aillent à la ligne lorsqu'ils n'ont plus la place avec <span class="bleu">flex-wrap</span>  qui peut prendre ces valeurs : <span class="violet">no-wrap, wrap, wrap-reverse</span>.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">justify-content</span>: <span class="violet">flex-start</span>;}</td>
+					<td> Les éléments sont organisés soit horizontalement (par défaut), soit verticalement. Cela définit ce qu'on appelle l'axe principal. Pour changer leur alignement, on va utiliser <span class="bleu">justify-content</span> , qui peut prendre ces valeurs : <span class="violet">flex-start, flex-end, center, space-between, space-around</span>.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">align-items</span>: <span class="violet">center</span>;}</td>
+					<td>Comme écrit juste au-dessus si nos éléments sont placés dans une direction horizontale (ligne), l'axe secondaire est... vertical. Avec <span class="bleu">align-items</span> , nous pouvons changer leur alignement sur l'axe secondaire. Il peut prendre ces valeurs : <span class="violet">stretch, flex-start, flex-end, center, baseline</span> *.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">align-sef</span>: <span class="violet">flex-end</span>;}</td>
+					<td>Il est possible de faire une exception pour un seul des éléments sur l'axe secondaire avec <span class="bleu">align-self</span>: avec les même valeurs qu'au-dessus.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">align-content</span>: <span class="violet">center</span>;}</td>
+					<td>Si vous avez plusieurs lignes dans votre Flexbox, vous pouvez choisir comment celles-ci seront réparties avec <span class="bleu">align-content</span> qui peux prendre ces valeurs:<br /> <span class="violet">stretch, flex-start, flex-end, center, space-around, space-between</span>.</td>
+				</tr>
+
+				<tr>
+					<td>.element:nth-child(1){<span class="bleu">order</span>: <span class="violet">2</span>;}</td>
+					<td>Sans changer le code HTML, nous pouvons modifier l'ordre des éléments en CSS grâce à la propriété <span class="bleu">order</span>. Si je dis que le premier élément sera placé en 2e position, l'ordre à l'écran change.</td>
+				</tr>
+
+			</table>
+
+		<p>* Le centrage vertical et horizontal peut d'ailleurs être obtenu encore plus facilement. Dites que votre conteneur est une flexbox et établissez des marges automatiques sur les éléments à l'intérieur: {<span class="bleu">margin</span>: <span class="violet">auto</span>;} .</p>
+
+		<h3 id="autre">Autres techniques de mise en page</h3>
+
+			<table>
+				
+				<tr>
+					<th>Nom</th>
+					<th>Description</th>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">display</span>: <span class="violet">block</span>;}</td>
+					<td>Cette propriété est capable de transformer n'importe quel élément de votre page d'un type vers un autre. Voici quelques-unes des principales valeurs qu'elle peux prendre: <span class="violet">block, inline, inline-block, none</span>.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">vertical-align</span>: <span class="violet">top</span>;}</td>
+					<td> Cette propriété permet de modifier l'alignement vertical des éléments. Voici quelques-unes des valeurs possibles pour cette propriété : <span class="violet">baseline, top, middle, bottom</span>.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">position</span>: <span class="violet">absolute</span>;}</td>
+					<td>Le positionnement absolu permet de placer un élément (réellement) n'importe où sur la page. Il fonctionne avec la propriété suivante. Il y a un point d'origine illustré sur le screen plus bas.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">right</span>: <span class="violet">10px</span>;}</td>
+					<td>Fonctionne avec la propriété précédente, en ajoutant au code: <span class="bleu">right, left, top, bottom</span>, il faut lui ajouer une valeur en pixel ou en pourcentage.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">z-index</span>: <span class="violet">2</span>;}</td>
+					<td>Les éléments positionnés en absolu sont placés par-dessus le reste des éléments de la page ! Par ailleurs, si vous placez deux éléments en absolu vers le même endroit, ils risquent de se chevaucher.<br /> Dans ce cas, utilisez la propriété <span class="bleu">z-index</span> pour indiquer quel élément doit apparaître au-dessus des autres.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">position</span>: <span class="violet">fixed</span>;}</td>
+					<td>Le principe est exactement le même que pour le positionnement absolu sauf que, cette fois, le bloc reste fixe à sa position, même si on descend plus bas dans la page.</td>
+				</tr>
+
+				<tr>
+					<td>{<span class="bleu">position</span>: <span class="violet">relative</span>;}</td>
+					<td>Fonctionne avec les mêmes propriétés que les deux prédédents positionnement. A la différence que cette fois <strong>l'origine se trouve en haut à gauche de la position actuelle de votre élément</strong>.</td>
+				</tr>
+
+			</table>
+
+			<figure class="photobase">
+				<img src="images/point_origine.png" alt="Une image de description">
+				<figcaption>Point d'origine de la position absolu</figcaption>
+			</figure>
+
+		</section>	
+
+	</div>
+
+	</body>
+</html>

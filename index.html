@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Grille des propriété HTML</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="icon" type="image/png" href="images/html5.png">
+	</head>
+
+	<body>
+
+	
+		<nav>
+			
+			<p><a href="grille_propriétés_css.html">Le CSS 3</a></p>
+					
+			<p>Balises obligatoires</p>
+
+			<ul>
+				<li><a href="#premier">Balises premier niveau</a></li>
+				<li><a href="#tete">Balise d'en-tête</a></li>
+			</ul>	
+
+			<p>Balises de structure</p>
+
+			<ul>
+				<li><a href="#struct">Balises structurantes</a></li>
+				<li><a href="#text">Balises de texte</a></li>
+				<li><a href="#list">Balises de liste</a></li>
+				<li><a href="#gen">Balises génériques</a></li>
+				<li><a href="#tableau">Balises de tableaux</a></li>
+				<li><a href="#form">Balises de forumlaire</a></li>
+				<li><a href="#media">Balise audio, vidéo</a></li>
+			</ul>
+			
+			<p>Attributs</p>
+
+			<ul>
+				<li><a href="#attrib">Liste des attributs</a></li>
+			</ul>
+
+		</nav>			
+		
+	<div id="bloc">	
+		
+		<header>
+
+			<h1><span class="grostitre">Les différents codes HTML</span></h1>
+
+			<p class="p1">Avant toute chose ce document n'est pas un cours, il n'est qu'un mémo destiné à moi même avant toute chose :o et pourquoi pas aux débutants (que je suis au moment ou j'écris cela), certains éléments peuvent paraitrent mal dit, de ce fait je vous encourage si vous avez des lacunes à visiter le <a href="https://openclassrooms.com/courses/apprenez-a-creer-votre-site-web-avec-html5-et-css3">cours</a> de Mathieu Nebra sur le site <a href="https://openclassrooms.com/">Openclassrooms</a> qui apporte toutes les informations nécéssaire à la bonne compréhension des tableaux. Certains screen ainsi que certaines phrases sont tirés de ce même cours.</p>
+
+			<p class="p1"><strong>La couleur rouge est une <span class="rouge">balise</span>, la verte représente un <span class="vert">attribut</span> tandis que la jaune représente une <span class="jaune">valeur</span>.</strong>
+			Ces couleurs sont là pour illustrer, en pratique elles apparaissent comme cela dans l'éditeur de texte "sublime text".</p>
+
+	<!--ici il faut mettre l illustration-->
+		
+			<figure class="photobase">
+				<img src="images/base_html.png" alt="Une image de la base du HTML">
+				<figcaption>Voici le départ d'une page web</figcaption>
+			</figure>
+
+		</header>
+			
+		<hr />
+
+		<section>
+
+		<h2>Grille des balises HTML obligatoires</h2>
+			
+		<h3 id="premier">Balises de premier niveau</h3>
+
+		<p>Voici l'ordre des balises obligatoires sur une nouvelle page html.</p> 
+			<table>
+					
+				<tr>
+					<th>Nom</th>
+					<th>Description</th>
+				</tr>
+					
+				<tr>
+					<td class="rouge">&lt;!doctype html&gt;</td>
+					<td>Le document HTML commence obligatoirement par cette balise.</td>
+				</tr>
+					
+				<tr>
+					<td><span class="rouge">&lt;html</span> <span class="vert">lang</span>=<span class="jaune">"fr"</span> <span class="rouge">/&gt;</span></td> 
+					<td>Celle ci suis la précédente, <strong>elle englobera tout le contenu de la page.</strong></td>
+				</tr>
+				
+				<tr>
+					<td class="rouge">&lt;head&gt;</td>
+					<td>Ici l'en-tête dans laquelle nous allons imbriquer les balises d'en-tête. Cette balise ne contiendra pas plus.<br />
+					Les informations contenus ne sont pas affichées à l'écran.</td>
+				</tr>
+				
+				<tr>
+					<td class="rouge">&lt;body&gt;</td>
+					<td>Cette balise contiendra le corps de la page, soit toutes les autres balises possible, tout son contenu sera affiché à l'écran.</td>
+				</tr>
+
+			</table> 
+
+		<h3 id="tete">Balises d'en-tête</h3>
+
+			<table>
+
+				<tr>
+					<th>Nom</th>
+					<th>Description</th>
+				</tr>
+
+				<tr>
+					<td><span class="rouge">&lt;meta</span> <span class="vert">charset</span>=<span class="jaune">"utf-8" /&gt;</span></td>
+					<td><strong>Balise orpheline</strong> d'en tête qui représente l'encodage, elle est englobée par <span class="rouge">&lt;head&gt;</span>.</td>
+				</tr>
+
+				<tr>
+					<td><span class="rouge">&lt;link</span> <span class="vert">rel</span>=<span class="jaune">"stylesheet"</span> <span class="vert">href</span>=<span class="jaune">"emplacement du fichier css"</span> /&gt;</td>
+					<td>Cette <strong>balise orpheline</strong> envoie vers un <strong>fichier css externe</strong>,elle est englobée par <span class="rouge">&lt;head&gt;</span>.</td>
+				</tr>
+					
+				<tr>
+					<td class="rouge">&lt;Title&gt;</td>
+					<td>Cela sera le titre de la page du navigateur, elle est englobée par <span class="rouge">&lt;head&gt;</span>.</td>
+				</tr>
+			</table>
+
+		</section>
+
+		<hr />
+			
+		<section>
+
+		<h2>Grille de balises de structure de texte</h2>
+
+			<p>Ici nous avons bon nombre de balises qui se contiendrons dans le <span class="rouge">&lt;body&gt;</span></p>
+
+		<h3 id="struct">Balises structurantes</h3>
+			
+		<p>Ces balises ont été introduites par HTML5 (elles n'existaient pas avant) et vont nous permettre de dire : « Ceci est mon en-tête », « Ceci est mon menu de navigation », etc.</p>
+			
+			<table>
+						
+				<tr>
+					<th>Nom</th>
+					<th>Description</th>
+				</tr>
+
+				<tr>
+					<td class="rouge">&lt;header&gt;</td>
+					<td>La plupart des sites web possèdent en général un en-tête, appelé header en anglais. On y trouve le plus souvent un logo, une bannière, le slogan de votre site…S</td>
+				</tr>
+
+				<tr>
+					<td class="rouge">&lt;nav&gt;</td>
+					<td>Cette balise permet de regrouper tout les liens de navigation du site.</td>
+				</tr>
+
+				<tr>
+					<td class="rouge">&lt;footer&gt;</td>
+					<td>À l'inverse de l'en-tête, le pied de page se trouve en général tout en bas du document. On y trouve des informations comme des liens de contact, le nom de l'auteur, les mentions légales, etc.</td>
+				</tr>
+
+				<tr>
+					<td class="rouge">&lt;aside&gt;</td>
+					<td>Cette balise est conçue pour contenir des informations complémentaires au document que l'on visualise. Ces informations sont généralement placées sur le côté (bien que ce ne soit pas une obligation).</td>
+				</tr>
+
+				<tr>
+					<td class="rouge">&lt;article&gt;</td>
+					<td>Celle-ci sert à englober une portion généralement autonome de la page. C'est une partie de la page qui pourrait ainsi être reprise sur un autre site. </td>
+				</tr>
+
+			</table>
+
+			<figure class="photobase">
+				<img src="images/balise_structure.png" alt="Une représentation">
+				<figcaption>Résumé en image</figcaption>
+			</figure>
+
+		<h3 id="text">Balises de texte</h3>	
+
+			<table>
+					<tr>
+						<th>Nom</th>
+						<th>Description</th>
+					</tr>
+
+					<tr>
+						<td>&lt;!--commentaire--&gt;</td>
+						<td>Ceci est une balise qui est écrite que dans le code, elle peux servir de mémo, elle ne s'affichera pas à l'écran.</td>
+					</tr>
+
+					<tr>
+						<td class="rouge">&lt;p&gt;</td>
+						<td>Ceci est un paragraphe, pour faire un saut de ligne il faudra rajouter un paragraphe. Pour revenir à la ligne on utilisera <span class="rouge">&lt;br /&gt;</span>.</td>
+					</tr>
+
+					<tr>
+						<td class="rouge">&lt;br /&gt;</td>
+						<td><strong>Balise orpheline</strong> pour revenir à la ligne, <strong>doit être obligatoirement contenue dans un paragraphe.</strong></td>
+					</tr>
+
+					<tr>
+						<td class="rouge">&lt;hr /&gt;</td>
+						<td>Balise créant une ligne de séparation horizontale.</td>
+					</tr>
+
+					<tr>
+						<td class="rouge">&lt;h1&gt;</td>
+						<td>Cette balise indique un titre, "h" pouvant aller de 1 pour "titre trés important" à 6 "titre trés peu important".</td>
+					</tr>
+
+					<tr>
+						<td class="rouge">&lt;em&gt;</td>
+						<td>Balise utilisée pour mettre un peu en valeur du texte. <strong>Ne pas se fier à l'affichage sans css, ne veux pas dire italique.</strong></td>
+					</tr>
+
+					<tr>
+						<td class="rouge">&lt;strong&gt;</td>
+						<td>Balise utilisée pour mettre beaucoup en valeur du texte. <strong>Ne pas se fier à l'affichage sans css, ne veux pas dire gras.</strong></td>
+					</tr>
+
+					<tr>
+						<td class="rouge">&lt;mark&gt;</td>
+						<td>Balise visant à marquer du texte, il sera surligné à l'écran.</td>
+					</tr>
+
+					<tr>
+						<td><span class="rouge">&lt;a;</span> <span class="vert">href</span>=<span class="jaune">"lien.html"</span><span class="rouge">&gt;</span></td>
+						<td>Balise pour créer des liens, l'attribut <span class="vert">"href"</span> est obligatoire et peux contenir une ancre à condition d'avoir ajouté un <span class="vert">id</span>.<br /> On peux créer une ancre vers ces liens en terminant la valeur par <span class="jaune">#textequelonveuxsansespace</span> permettant ainsi de naviguer vers un endroit de la page précis plus rapidement. </td>
+					</tr>
+
+			</table>
+
+		<p></p>
+	
+		<h3 id="list">Balises de liste</h3>
+
+			<table>
+				
+				<tr>
+					<th>Nom</th>
+					<th>Description</th>
+				</tr>
+
+				<tr>
+					<td class="rouge">&lt;ul&gt;</td>
+					<td>Balise de liste à puces.</td>
+				</tr>
+
+				<tr>
+					<td class="rouge">&lt;ol&gt;</td>
+					<td>Balise de liste numérotée.</td>
+				</tr>	
+
+				<tr>
+					<td class="rouge">&lt;li&gt;</td>
+					<td>Cette balise doit se contenir <strong>obligatoirement</strong> dans une balise <span class="rouge">&lt;ol&gt;</span> ou bien une balise <span class="rouge">&lt;ul&gt;</span>. Elle contiendra notamment les éléments de la liste.</td>
+				</tr>
+
+			</table>
+
+		<h3 id="gen">Balises génériques</h3>
+
+		<p>On a inventé deux balises dites universelles, qui n'ont aucune signification particulière, elle servent à sélectionner un mot ou un ou groupe de balise pour pouvoir appliquer les modifications voulues.</p>
+
+			<table>
+						
+				<tr>
+					<th>Nom</th>
+					<th>Description</th>
+				</tr>
+
+				<tr>
+					<td class="rouge">&lt;span&gt;</td>
+					<td>Balise de type inline, c'est-à-dire une balise que l'on place au sein d'un paragraphe de texte, pour sélectionner certains mots uniquement.Les balises <span class="rouge">&lt;strong&gt;</span> et <span class="rouge">&lt;em&gt;</span> sont de la même famille. </td>
+				</tr>
+
+				<tr>
+					<td class="rouge">&lt;div&gt;</td>
+					<td>Balise de type block, qui entoure un bloc de texte. Les balises <span class="rouge">&lt;p&gt;</span>, <span class="rouge">&lt;h1&gt;</span>, etc. sont de la même famille.</td>
+				</tr>
+
+			</table>
+
+		<h3 id="tableau">Balises des tableaux</h3>
+
+			<table>
+				
+				<tr>
+					<th>Nom</th>
+					<th>Description</th>
+				</tr>
+
+				<tr>
+					<td class="rouge">&lt;table&gt;</td>
+					<td>C'est cette balise qui permet d'indiquer le début et la fin d'un tableau.</td>
+				</tr>
+
+				<tr>
+					<td class="rouge">&lt;tr&gt;</td>
+					<td> indique le début et la fin d'une ligne du tableau.</td>
+				</tr>
+
+				<tr>
+					<td class="rouge">&lt;td&gt;</td>
+					<td>indique le début et la fin du contenu d'une cellule.</td>
+				</tr>
+
+				<tr>
+					<td class="rouge">&lt;th&gt;</td>
+					<td>C'est la ligne d'en-tête du tableau, comme vous pouvez le constater, votre navigateur a mis en gras le texte des cellules d'en-tête.</td>
+				</tr>
+
+				<tr>
+					<td class="rouge">&lt;caption&gt;</td>
+					<td>Cette balise se place tout au début du tableau, juste avant l'en-tête. C'est elle qui contient le titre du tableau.</td>
+				</tr>
+
+				<tr>
+					<td class="rouge">&lt;thead&gt;</td>
+					<td>Si votre tableau est assez gros, vous aurez tout intérêt à le découper en plusieurs parties.<br /> Pour cela, il existe des balises HTML qui permettent de définir les trois « zones » du tableau, donc celle ci fait parti, ainsi que les deux suivantes.*</td>
+				</tr>
+
+				<tr>
+					<td class="rouge">&lt;tbody&gt;</td>
+					<td>Indique le pied d'un grand tableau.</td>
+				</tr>
+
+				<tr>
+					<td class="rouge">&lt;tbody&gt;</td>
+					<td>Indique le corps d'un tableau.</td>
+				</tr>
+
+			</table>
+
+		<figure class="photobase" >
+			<img src="images/tableau.png">
+			<figcaption>Un tableau en plusieurs parties</figcaption>
+		</figure>
+
+		<p>A noter les cellules par défaut seront espacées, pour les coller il faudra utiliser la propriété css <a href="Grille_propriétés_CSS.html#ancre_1">suivante</a>.</p>
+		<p>Certains attributs peuvent être utiles dans certains cas, ils sont inscrits dans ce <a href="#attributs">tableau</a>.</p>
+		<p>*Dans le code, on renseigne donc d'abord la partie du haut, ensuite la partie du bas, et enfin la partie principale <span class="rouge">&lt;tbody&gt;</span>. Le navigateur se chargera d'afficher chaque élément au bon endroit.</p>
+
+		<h3 id="form">Balises des formulaires</h3>
+
+			<table>
+				
+				<tr>
+					<th>Nom</th>
+					<th>Description</th>
+				</tr>
+
+				<tr>
+					<td class="rouge">&lt;form&gt;</td>
+					<td>Tout comme un tableau, cette balise indique le début et la fin du formulaire. Cette balise est suivi par des attributs <span class="vert">method</span> et <span class="vert">action</span>.<br /> Cependant pour écrire du texte dans un formulaire il faudra <strong>obligatoirement</strong> mettre des balises block telle que <span class="rouge">&lt;p&gt;</span></td>
+				</tr>
+
+				<tr>
+					<td class="rouge">&lt;label&gt;</td>
+					<td>Cette balise sert de libéllé pour indiquer à l'utilisateur ce qu'il devra inscrire dans l'encart désigné par la balise suivante.<br /> Cette balise aura besoin d'attributs comme <span class="vert">for</span> qui reliera à une zone de texte si elle possède un <span class="vert">id</span>. </td>
+				</tr>
+
+				<tr>
+					<td class="rouge">&lt;input /&gt;</td>
+					<td>Dans un formulaire cette balise sert à créer une zone de texte monoligne, pour remplir les champs indiqué par le libéllé, des attributs seront nécéssaires tels que: <span class="vert">type, name, id, size</span>...</td>
+				</tr>
+
+				<tr>
+					<td class="rouge">&lt;textarea&gt;</td>
+					<td>Cette balise sert à créer une zone de texte multi-lignes.<br /> Comme pour tout autre élément du formulaire, il faut lui donner un nom avec <span class="vert">name</span> et utiliser un <span class="rouge">&lt;label&gt;</span> qui explique de quoi il s'agit. Pour agrandir la zone on utlisera le CSS.<br /> <strong>Pour pré-remplir cette zone de texte, on n'utilisera pas l'attribut <span class="vert">value</span> mais on écrira simplementle texte par défaut.</strong></td>
+				</tr>
+
+				<tr>
+					<td class="rouge">&lt;select&gt;</td>
+					<td>Indique le début et la fin d'une liste déroulante. Cette balise aura un attribut <span class="vert">name</span>, et on imbriquera les balises suivantes dedans.</td>
+				</tr>
+
+				<tr>
+					<td class="rouge">&lt;option&gt;</td>
+					<td>Balise qui s'imbrique dans <span class="rouge">&lt;select&gt;</span> permettant de définir un choix dans un formulaire, il faudra autant de balises que de possibilités de réponses.<br/>
+						Cette balise aura besoin de l'attribut <span class="vert">value</span>.</td>
+				</tr>
+
+				<tr>
+					<td class="rouge">&lt;optgroup&gt;</td>
+					<td>Permet de grouper les options. L'attribut <span class="vert">label</span> est necessaire pour nommer la catégorie.</td>
+				</tr>
+
+				<tr>
+					<td class="rouge">&lt;fieldset&gt;</td>
+					<td>Si votre formulaire grossit et comporte beaucoup de champs, il peut être utile de les regrouper au sein de plusieurs balises <span class="rouge">&lt;fieldset&gt;</span>.</td>
+				</tr>
+
+				<tr>
+					<td class="rouge">&lt;legend&gt;</td>
+					<td>Chaque <span class="rouge">&lt;fieldset&gt;</span> peux contenir cette balise qui permet d'ajouter une légende à la catégorie.</td>
+				</tr>
+
+			</table>
+
+		<p><a href="#attributs_form">Ici</a> vous avez la liste des attributs et valeurs dont toutes ces balises ont besoin.</p>
+
+		<h3 id="media">Balises images, audio, vidéo</h3>
+
+			<table>
+
+					<tr>
+						<th>Nom</th>
+						<th>Description</th>
+					</tr>
+
+					<tr>
+						<td class="rouge">&lt;img /&gt;</td>
+						<td>La balise doit être accompagnée de deux attributs obligatoires : <span class="vert">src</span> qui permet d'indiquer où se trouve l'image (chemin absolu ou relatif) et <span class="vert">alt</span> qui veux dire "texte alternatif".<br />Celui-ci s'affichera si le site ne parvient pas a afficher les images, ou bien pour les navigateurs pour personnes non-voyante. On peux tres bien ajouter un titre à l'image avec l'attribut qui convient.<br /> <strong>Une image doit se trouver dans un paragraphe si elle n'apporte aucune compréhension au texte ou une figure si elle doit illustrer le texte!</strong></td>
+					</tr>
+
+					<tr>
+						<td class="rouge">&lt;figure&gt;</td>
+						<td>La balise <span class="rouge">&lt;figure&gt;</span> a un rôle avant tout sémantique. Cela veut dire qu'elle indique à l'ordinateur que l'image a du sens et qu'elle est importante pour la bonne compréhension du texte.<br /> Elle est souvent accompagnée de la balise <span class="rouge">&lt;figcaption&gt;</span> qui permet d'ajouter une légende à celle-ci.</td>
+					</tr>
+
+					<tr>
+						<td class="rouge">&lt;audio&gt;</td>
+						<td>Balise permettant d'inserer une piste audio, elle doit être accompagné de bon nombres d'attributs pour la personnaliser.</td>
+					</tr>
+
+					<tr>
+						<td class="rouge">&lt;video&gt;</td>
+						<td>Cette balise permet d'inserer une vidéo, tout comme l'audio il faut la personnaliser.</td>
+					</tr>
+
+					<tr>
+						<td class="rouge">&lt;source&gt;</td>
+						<td>Cette balise peux s'inclure dans une des deux précédante, dans le cas où l'on veux proposer plusieurs format audio ou vidéo au navigateur pour qu'il choisisse le plus pertinent pour lui. L'attribut <span class="vert">src</span> est à rajouter.</td>
+					</tr>
+
+			</table>
+
+		<p>Vous trouverez les attributs nécéssaires à ces balises en cliquant <a href="#attributs_video">la</a>.</p>
+
+		</section>
+
+		<hr />
+
+		<section>
+
+		<h2 id="attrib">Grille des attributs et des valeurs</h2>
+
+		<p>Ici des attributs qui se placent dans des balisent afin de créer : ancre, repère, cible...</p>
+
+		<h3>Liste de quelques attributs et valeurs</h3>
+
+			<table id="attributs">
+
+					<tr>
+						<th>Nom</th>
+						<th>Description</th>
+					</tr>
+
+					<tr>
+						<td class="vert">class</td>
+						<td><span class="vert">"Class"</span> est un attribut qui permet d'ajouter une valeur utilisable plusieurs fois pour repérer une balise  et ainsi la modifier en css.</td>
+					</tr>
+
+					<tr>
+						<td class="vert">id</td>
+						<td><span class="vert">"id"</span> est un attribut qui permet d'ajouter une valeur <strong>unique</strong> pour repérer une balise de texte à ancrer et aussi la modifer en css.</td>
+					</tr>
+
+					<tr>
+						<td class="vert">title</td>
+						<td>Attribut facultatif que l'on peux rajouter aux balises <span class="rouge">&lt;a&gt;</span> visant à afficher un texte lors du survol de celui-ci.</td>
+					</tr>
+
+					<tr>
+						<td><span class="vert">target</span>=<span class="jaune">"_blank"</span></td>
+						<td>Ici l'attribut <span class="vert">target</span> qui fonctionne avec la valeur <span class="jaune">_blank</span> qui permet d'ouvrir le lien vers une nouvelle page.</td>
+					</tr>
+
+					<tr>
+						<td><span class="vert">href</span>=<span class="jaune">"mailto:votrenom@messagerie.com"</span></td>
+						<td>Pour faire envoyer un mail au visiteur, rien de plus simple il suffit d'attacher cette valeur à l'attribut <span class="vert">href</span>.</td>
+					</tr>
+
+					<tr>
+						<td><span class="vert">href</span>=<span class="jaune">"monfichier.zip"</span></td>
+						<td>Même chose que le mail, il suffit de remplacer la valeur par le nom du fichier en question, le navigateur lancera tout seul le telechargement au clic.</td>
+					</tr>
+
+					<tr>
+						<td> <span class="rouge">&lt;td</span> <span class="vert">colspan</span>=<span class="jaune">"2"</span><span class="rouge">&gt;</span></td>
+						<td>Cet attribut qui se place dans une balise <span class="rouge">&lt;td&gt;</span> sert à fusionner des colonnes ou des lignes d'un tableau, dans cet exemple il s'agira de colonnes.<br /> Pour fusionner des lignes on utlisera l'attribut <span class="vert">rowspan</span>. Il faudra aussi indiquer une valeur en chiffre, soit autant de cellules que l'on désire.</td>
+					</tr>
+
+			</table>
+
+			<hr />
+
+			<table  id="attributs_form">
+					
+					<tr>
+						<td><span class="vert">method</span>=<span class="jaune">"get"</span></td>
+						<td>Cet attribut qui se place dans une balise <span class="rouge">&lt;form&gt;</span>, indique par quel moyen les données vont être envoyées au destinataire.<br /> Il peux prendre deux valeurs: <span class="jaune">get</span>, méthode peu adaptée qui est limité à 255 caractères, ou avec la valeur <span class="jaune">post</span> que l'on utilisera dans 99% des cas, car elle permet d'envoyer beaucoup d'informations.</td>	
+					</tr>
+
+					<tr>
+						<td class="vert">action</td>
+						<td>C'est l'adresse de la page ou du programme qui va traiter les informations que l'utilisateur a rempli dans un formulaire.</td>
+					</tr>
+
+					<tr>
+						<td><span class="vert">type</span>=<span class="jaune">"text"</span></td>
+						<td>Dans un formulaire cet attribut s'insère dans une balise <span class="rouge">&lt;input /&gt;</span>, avec la valeur <span class="jaune">text</span> il indiquera une zone de texte.<br />
+							 Si on lui met la valeur <span class="jaune">password</span> les caractères seront cryptés.<br /> 
+							 La valeur <span class="jaune">email</span> indiquera au navigateur qu'il faudra rentrer une adresse mail ici.<br /> 
+							 La valeur <span class="jaune">url</span> indiquera au navigateur qu'il faut rentrer une adresse absolue .<br /> 
+							 La valeur <span class="jaune">tel</span> indiquera au navigateur qu'un numéro de telephone est recquis.<br />
+							 La valeur <span class="jaune">number</span> permettra de saisir un nombre entier. Inclus facultativement dans ce cas les attributs: <span class="vert">min, max, step</span>.<br />
+							 La valeur <span class="jaune">range</span> permet de selectionner un nombre avec un curseur, et peux avoir les êmes attributs que <span class="jaune">number</span>.<br />
+							 La valeur <span class="jaune">color</span> permet de saisir une couleur.<br />
+							 Les valeurs <span class="jaune">time, date, week, month, datetime, datetime-local</span> permettent toutes d'indiquer un affichage de date plus ou moins ciblé.<br />
+							 La valeur <span class="jaune">search</span> permet de créer un champ de recherche.<br />
+							 La valeur <span class="jaune">checkbox</span> permet de créer une case à cocher. Ne pas oublier d'utiliser un <span class="rouge">&lt;label&gt;</span><br />
+							 La valeur <span class="jaune">radio</span> permet de faire un choix (et un seul) parmis une liste. Elles doivent être organisées en groupe, les options du même groupe on le même <span class="vert">name</span>, mais chaque option à une <span class="vert">value</span> différente.<br />
+							 La valeur <span class="jaune">submit</span> permet de créer un bouton d'envoie vers la page choisi dans l'attribut <span class="vert">action</span>.<br />
+							 La valeur <span class="jaune">reset</span> permet de faire une remise à zéro du formulaire.<br />
+							 La valeur <span class="jaune">image</span> est l'équivalent de <span class="jaune">submit</span>, mais présenté sous forme d'image, ne pas oublier d'insérer l'url avec l'attribut <span class="vert">src</span>.<br />
+							 La valeur <span class="jaune">button</span> n'aura aucun effet par défaut mais est généralement utilisé en javascript pour exécuter des actions sur la page.
+							 </td>
+					</tr>
+
+					<tr>
+						<td class="vert">name</td>
+						<td>Dans un formulaire cet attribut permettra de donner un nom à un élément, qui servira à reconnaitre celui-ci pour le traitement des informations (en php par exemple).</td>
+					</tr>
+
+					<tr>
+						<td class="vert">size</td>
+						<td>Dans un formulaire on donnera cet attribut à la balise <span class="rouge">&lt;input /&gt;</span> pour agrandir le champ.</td>
+					</tr>
+
+					<tr>
+						<td class="vert">maxlength</td>
+						<td>Dans un formulaire on donnera cet attribut à la balise <span class="rouge">&lt;input /&gt;</span> pour limiter le nombre de caratèeres.</td>
+					</tr>
+
+					<tr>
+						<td class="vert">value</td>
+						<td>Dans un formulaire on donnera cet attribut à la balise <span class="rouge">&lt;input /&gt;</span> pour pré-remplir un champ par défaut.</td>
+					</tr>
+
+					<tr>
+						<td class="vert">placeholder</td>
+						<td>Dans un formulaire on donnera cet attribut à la balise <span class="rouge">&lt;input /&gt;</span> pour donner une indication au visiteur sur quoi écrire dans la zone de texte.</td>
+					</tr>
+
+					<tr>
+						<td class="vert">for</td>
+						<td>Attribut qui suit un <span class="rouge">&lt;label&gt;</span>, qui relie à une zone de texte dont l'<span class="vert">id</span> correspond.</td>
+					</tr>
+
+					<tr>
+						<td class="vert">rows</td>
+						<td>Attribut qui pour la balise <span class="rouge">&lt;textarea&gt;</span>, qui indique le nombre de lignes de texte pouvant être affichées simultanément.</td>
+					</tr>
+
+					<tr>
+						<td class="vert">cols</td>
+						<td>Attribut qui pour la balise <span class="rouge">&lt;textarea&gt;</span>, qui indique le nombre de colonnes de texte pouvant être affichées simultanément.</td>
+					</tr>
+
+					<tr>
+						<td class="vert">checked</td>
+						<td>Permet de faire en sorte qu'une case soit cochée par défaut.</td>
+					</tr>
+
+					<tr>
+						<td class="vert">autofocus</td>
+						<td>Vous pouvez placer automatiquement le curseur dans l'un des champs de votre formulaire avec cet attribut.</td>
+					</tr>
+
+					<tr>
+						<td class="vert">required</td>
+						<td>Rend un champ obligatoire, si le champ est vide le navigateur indiquera à l'utilisateur que le champ doit être rempli.</td>
+					</tr>
+
+			</table>
+
+			<hr />
+
+			<table id="attributs_video">
+				
+					<tr>
+						<td class="vert">controls</td>
+						<td>Attribut servant à rajouter les boutons lecture, pause et la barre de défilement à une piste audio ou vidéo.</td>
+					</tr>
+
+					<tr>
+						<td class="vert">width</td>
+						<td>Permet de modifier la largeur de l'outil audio ou vidéo.</td>
+					</tr>
+
+					<tr>
+						<td class="vert">loop</td>
+						<td>Permet de créer une boucle avec la piste audio ou vidéo.</td>
+					</tr>
+
+					<tr>
+						<td class="vert">autoplay</td>
+						<td>La piste audio ou vidéo sera jouée dès le chargement de la page.</td>
+					</tr>
+
+					<tr>
+						<td class="vert">preload</td>
+						<td>Indique si la piste audio ou vidéo peut être préchargée dès le chargement de la page ou non. Cet attribut peut prendre les valeurs suivantes: <br />
+							<span class="jaune">auto</span>:  le navigateur décide s'il doit précharger toute la musique, uniquement les métadonnées ou rien du tout. <br />
+							<span class="jaune">metadata</span>: charge uniquement les métadonnées (durée, etc.).<br />
+							<span class="jaune">none</span>: pas de préchargement. Utile si vous ne voulez pas gaspiller de bande passante sur votre site.</td>
+					</tr>
+
+					<tr>
+						<td class="vert">poster</td>
+						<td>Image à afficher à la place de la vidéo tant que celle-ci n'est pas lancée. Par défaut, le navigateur prend la première image de la vidéo mais, comme il s'agit souvent d'une image noire ou d'une image peu représentative de la vidéo, je vous conseille d'en créer une !</td>
+					</tr>
+
+			</table>
+
+		</section>
+		
+	</div>
+
+	</body>
+</html>
